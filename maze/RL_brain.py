@@ -87,3 +87,9 @@ class SarsaLambdaTable(RL):
             self.q_table = self.q_table._append(to_be_append)
             self.eligibility_trace = self.eligibility_trace._append(to_be_append)
 
+
+class DeepQNetwork(object):
+
+    def __init__(self, n_actions, n_features, learning_rate=0.01, reward_decay=0.9, e_greedy=0.9,
+                 replace_target_iter=300, memory_size=500, batch_size=32, e_greedy_increment=None, output_graph=False):
+        super().__init__()
